@@ -1,16 +1,20 @@
-## Hi there 👋
+# Pointe Consulting Website
 
-<!--
-**PointeConsulting/PointeConsulting** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This is the official website for Pointe Consulting, Inc.
 
-Here are some ideas to get you started:
+## About
+Pointe Consulting provides Enterprise HR and ERP consulting services specializing in PeopleSoft and Oracle Fusion HCM solutions.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Website
+This site is hosted using GitHub Pages.
+
+Live site: https://pointeconsulting.github.io/your-repo-name/
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript (if applicable)
+
+## Contact
+Pointe Consulting, Inc.
+Boynton Beach, FL
