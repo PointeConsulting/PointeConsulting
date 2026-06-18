@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pointe Consulting, Inc.</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    line-height:1.6;
+    color:#333;
+    background:#ffffff;
+}
+
+/* Header */
+header{
+    background:#003366;
+    color:white;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    color:white;
+}
+
+.logo span{
+    color:#d62828;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d62828;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(rgba(0,51,102,.85),rgba(0,51,102,.85)),
+    url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:3.2rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    max-width:850px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:#d62828;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#b71c1c;
+}
+
+/* Sections */
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    color:#003366;
+    margin-bottom:50px;
+    font-size:2.3rem;
+}
+
+/* About */
+.about{
+    background:#f8f9fa;
+}
+
+.about-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.about-box{
+    background:white;
+    padding:30px;
+    border-left:5px solid #d62828;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Services */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-top:5px solid #003366;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-card h3{
+    color:#003366;
+    margin-bottom:15px;
+}
+
+/* Why Us */
+.why-us{
+    background:#003366;
+    color:white;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.feature{
+    text-align:center;
+    padding:20px;
+}
+
+.feature h3{
+    color:#ff5a5f;
+    margin-bottom:10px;
+}
+
+<div class="logo-container">
+
+/* Contact */
+.contact{
+    background:#f8f9fa;
+    text-align:center;
+}
+
+.contact-info{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-info p{
+    margin:10px 0;
+    font-size:1.1rem;
+}
+
+/* Footer */
+footer{
+    background:#001f3f;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+    .about-content{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:2.3rem;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+
+/* ===== Pointe Consulting Logo ===== */
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* Bigger logo */
+.pc-logo-simple{
+    width:70px;
+    height:70px;
+    background:white;
+    color:#0A2E6E;
+    border:3px solid #D71920;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:800;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+
+/* Company name bigger and more prominent */
+.company-name-inline{
+    color:#ffffff;
+    font-size:1.8rem;
+    font-weight:800;
+    letter-spacing:0.6px;
+    white-space:nowrap;
+}
+
+/* Optional spacing tuning */
+.logo-container{
+    padding:10px 0;
+}
+
+.contact-company{
+    font-size:4.2rem;
+    font-weight:900;
+    color:#003366;
+    margin-bottom:12px;
+    letter-spacing:0.8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+   <div class="logo-container">
+
+   <div class="pc-logo-simple">PC</div>
+
+    <div class="company-name-inline">
+        Pointe Consulting, Inc
+    </div>
+
+
+</div>
+
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#whyus">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</div>
+</header>
+
+<section class="hero">
+<h1>Enterprise HR & ERP Consulting Solutions</h1>
+<p>
+Helping organizations maximize the value of Oracle Fusion HCM,
+PeopleSoft, HRIS, ERP, Business Intelligence, and Digital Transformation
+initiatives through expert consulting and delivery services.
+</p>
+
+<a href="#contact" class="btn">Request a Consultation</a>
+</section>
+
+<section id="about" class="about">
+<div class="container">
+<h2 class="section-title">About Pointe Consulting, Inc.</h2>
+
+<div class="about-content">
+
+<div class="about-box">
+<h3>Who We Are</h3>
+<p>
+Pointe Consulting, Inc. is a trusted technology consulting firm specializing
+in Human Capital Management (HCM), Enterprise Resource Planning (ERP),
+Business Analysis, and Digital Transformation solutions.
+</p>
+</div>
+
+<div class="about-box">
+<h3>Our Mission</h3>
+<p>
+We help organizations streamline business processes, improve operational
+efficiency, and achieve measurable results through innovative technology
+solutions and strategic consulting expertise.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Oracle Fusion HCM</h3>
+<p>
+Implementation, configuration, reporting, data conversion,
+testing, and production support.
+</p>
+</div>
+
+<div class="service-card">
+<h3>PeopleSoft HCM & FSCM</h3>
+<p>
+Functional and technical consulting, upgrades,
+enhancements, integrations, and support services.
+</p>
+</div>
+
+<div class="service-card">
+<h3>Business Analysis</h3>
+<p>
+Requirements gathering, process mapping,
+documentation, testing, and stakeholder engagement.
+</p>
+</div>
+
+<div class="service-card">
+<h3>ERP Transformation</h3>
+<p>
+Strategic planning, implementation management,
+change management, and optimization.
+</p>
+</div>
+
+<div class="service-card">
+<h3>Reporting & Analytics</h3>
+<p>
+BI Publisher, OTBI, dashboards,
+KPIs, and executive reporting solutions.
+</p>
+</div>
+
+<div class="service-card">
+<h3>Project Leadership</h3>
+<p>
+Program management, PMO support,
+Agile delivery, and governance.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="whyus" class="why-us">
+<div class="container">
+<h2 class="section-title" style="color:white;">Why Choose Pointe Consulting?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>30+ Years Experience</h3>
+<p>
+Extensive experience delivering successful HRIS and ERP solutions.
+</p>
+</div>
+
+<div class="feature">
+<h3>Industry Expertise</h3>
+<p>
+Deep knowledge of HR, Payroll, Benefits, Finance, and Talent Management.
+</p>
+</div>
+
+<div class="feature">
+<h3>Results Driven</h3>
+<p>
+Focused on delivering measurable business outcomes and value.
+</p>
+</div>
+
+<div class="feature">
+<h3>Client Focused</h3>
+<p>
+Dedicated to building long-term partnerships and trusted relationships.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-info">
+<p class="contact-company">Pointe Consulting, Inc</p>
+<p>Boynton Beach, Florida</p>
+<p>Oracle Fusion HCM • PeopleSoft • ERP Consulting</p>
+<p>Email: info@pointeconsulting.com</p>
+<p>Phone: (305) 798-3594</p>
+
+<a href="mailto:info@pointeconsulting.com" class="btn">
+Contact Us Today
+</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>
+© 2026 Pointe Consulting, Inc. All Rights Reserved.
+</p>
+</footer>
+
+</body>
+</html>
